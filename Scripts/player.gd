@@ -4,7 +4,7 @@ extends RigidBody2D
 onready var animPlayer :AnimatedSprite= get_node("anim");
 
 #Força do pulo
-const force_jump: int = 600;
+const force_jump: int = 400;
 #Se o personagem esta sendo impulsionado
 var impulse: bool = false;
 
