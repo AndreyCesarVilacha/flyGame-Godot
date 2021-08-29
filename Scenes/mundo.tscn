@@ -43,7 +43,8 @@ script = ExtResource( 18 )
 
 [node name="player" type="RigidBody2D" parent="."]
 position = Vector2( 60, 350 )
-gravity_scale = 10.0
+mass = 1.22449
+gravity_scale = 9.0
 script = ExtResource( 2 )
 
 [node name="anim" type="AnimatedSprite" parent="player"]
