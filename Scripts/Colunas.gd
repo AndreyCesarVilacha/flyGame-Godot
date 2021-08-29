@@ -19,3 +19,8 @@ func _process(delta) -> void:
 		DadosGame.pontuar(pontos);
 		queue_free()
 
+
+
+func _on_area_body_entered(body):
+	DadosGame.pontos = 0;
+	get_tree().reload_current_scene();

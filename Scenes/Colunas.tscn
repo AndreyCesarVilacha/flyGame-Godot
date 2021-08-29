@@ -35,3 +35,5 @@ shape = SubResource( 1 )
 [node name="shape2" type="CollisionShape2D" parent="area"]
 position = Vector2( 6.15381, 569.248 )
 shape = SubResource( 2 )
+
+[connection signal="body_entered" from="area" to="." method="_on_area_body_entered"]
