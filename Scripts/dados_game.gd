@@ -4,3 +4,6 @@ extends Node
 #Project -> Project settings -> Autoload
 
 var pontos : int = 0;
+
+func pontuar(valor : int):
+	pontos += valor;

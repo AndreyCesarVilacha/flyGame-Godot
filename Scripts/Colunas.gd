@@ -16,6 +16,6 @@ func _process(delta) -> void:
 	self.position.x -= coluna_speed * delta;
 	
 	if self.position.x < -50:
-		DadosGame.pontos += pontos;
+		DadosGame.pontuar(pontos);
 		queue_free()
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=26 format=2]
 
 [ext_resource path="res://assets/fly/0005.png" type="Texture" id=1]
 [ext_resource path="res://Scripts/player.gd" type="Script" id=2]
@@ -21,6 +21,7 @@
 [ext_resource path="res://assets/sprites/montanha_fundo.png" type="Texture" id=19]
 [ext_resource path="res://assets/sprites/montanha.png" type="Texture" id=20]
 [ext_resource path="res://assets/sprites/nuvens.png" type="Texture" id=21]
+[ext_resource path="res://assets/fontes/Arciform.otf" type="DynamicFontData" id=22]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
@@ -38,6 +39,11 @@ animations = [ {
 [sub_resource type="CircleShape2D" id=2]
 radius = 31.6427
 
+[sub_resource type="DynamicFont" id=3]
+size = 25
+use_filter = true
+font_data = ExtResource( 22 )
+
 [node name="mundo" type="Node2D"]
 script = ExtResource( 18 )
 
@@ -51,7 +57,7 @@ script = ExtResource( 2 )
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 1 )
 animation = "fly"
-frame = 8
+frame = 7
 playing = true
 
 [node name="shape" type="CollisionShape2D" parent="player"]
@@ -94,7 +100,14 @@ z_index = 1
 
 [node name="Score" type="Label" parent="pontos"]
 margin_right = 450.0
-margin_bottom = 36.0
+margin_bottom = 48.0
+custom_fonts/font = SubResource( 3 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_colors/font_outline_modulate = Color( 0.968627, 1, 0, 1 )
+custom_colors/font_color_shadow = Color( 0, 0, 0, 1 )
+custom_constants/shadow_offset_x = 4
+custom_constants/shadow_offset_y = 4
+custom_constants/shadow_as_outline = 0
 text = "0000"
 align = 1
 valign = 1

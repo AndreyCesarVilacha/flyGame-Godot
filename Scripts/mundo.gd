@@ -1,7 +1,7 @@
 extends Node2D
 
 #Obtendo o caminho da Scene Coluna
-const pre_colunas     : Resource = preload("res://Scenes/Colunas.tscn");
+const PRE_COLUNAS     : Resource = preload("res://Scenes/Colunas.tscn");
 #Obtendo os fundos
 onready var fundo1    : Node = get_node("cenario/fundo");
 onready var fundo2    : Node = $cenario/fundo2;
@@ -28,7 +28,7 @@ func mover_cenario(node1:Node, node2:Node, velocidade:float, posicao:float) -> v
 func criar_colunas():
 	
 	#Criando uma instância de coluna
-	var colunas = pre_colunas.instance();
+	var colunas = PRE_COLUNAS.instance();
 	#Gerando numeros aleatorios para a posição y da coluna
 	colunas.position.y = rand_range(200, 450);
 	#Posição inicial da coluna
