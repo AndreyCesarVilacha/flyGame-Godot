@@ -9,6 +9,8 @@ onready var montanha1 : Node = $cenario/montanha;
 onready var montanha2 : Node = $cenario/montanha2;
 onready var nuvem1    : Node = $cenario/nuvem;
 onready var nuvem2    : Node = $cenario/nuvem2;
+#Obtendo o label 'Score'
+onready var scoreNode :Node = $pontos/Score;
 
 
 #Var responsavel por controlar o tempo de crianção da coluna
@@ -38,6 +40,8 @@ func _ready() -> void:
 	pass
 
 func _process(delta) -> void:
+	
+	scoreNode.text = str(DadosGame.pontos);
 	
 	#Incrementado o tempo_instanciar por delta
 	tempo_instanciar += delta;

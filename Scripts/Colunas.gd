@@ -3,6 +3,8 @@ extends Node2D
 #Var pra controlar a velocidade da coluna
 #A palavra export, faz a variavel ficar disponivel no Inspector
 export var coluna_speed: float = 200;
+#Var para pontos
+export var pontos: int = 30;
 
 func _ready() -> void:
 	pass
@@ -14,5 +16,6 @@ func _process(delta) -> void:
 	self.position.x -= coluna_speed * delta;
 	
 	if self.position.x < -50:
+		DadosGame.pontos += pontos;
 		queue_free()
 

@@ -27,7 +27,7 @@ func on_touch() -> void:
 func _ready() -> void:
 	#Conectado o sinal "animation finished" no proprio Rigid (self) e
 	#chama a função "anim_finished"
-	animPlayer.connect("animation finished",self,"anim_finished");
+	animPlayer.connect("animation_finished",self,"anim_finished");
 
 #Esta função é chamada a cada frame
 func _process(delta) -> void:
