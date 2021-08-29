@@ -43,15 +43,15 @@ script = ExtResource( 18 )
 
 [node name="player" type="RigidBody2D" parent="."]
 position = Vector2( 60, 350 )
-mass = 1.22449
-gravity_scale = 9.0
+mass = 0.918367
+gravity_scale = 6.0
 script = ExtResource( 2 )
 
 [node name="anim" type="AnimatedSprite" parent="player"]
 scale = Vector2( 0.5, 0.5 )
 frames = SubResource( 1 )
 animation = "fly"
-frame = 7
+frame = 3
 playing = true
 
 [node name="shape" type="CollisionShape2D" parent="player"]
